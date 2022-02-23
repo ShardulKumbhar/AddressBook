@@ -47,22 +47,23 @@ class Addressbook {
 			System.out.println("Contact Added");
 			System.out.println(contacts);
 
-			System.out.println("Enter the first name of contact you want to edit :");
+			//userinput to remove contact by user name
+			System.out.println("Enter the first name of contact you want to remove :");
 			String fn1 = scanner.nextLine();
 
 			if (fn1.equals(firstn)) {
-				dataAdd();
+				contacts.removeAll(contacts);
+				System.out.println(contacts);
+				System.out.println(contacts + "Empty Address Book");
+
 			} else {
 				System.out.println("NO contact exists by this name !!! Please try again");
 			}
-
 		}
-
 	}
-
 }
 
-public class UC3 {
+public class UC4 {
 
 	public static void main(String[] args) {
 		System.out.println("PhoneBook");
